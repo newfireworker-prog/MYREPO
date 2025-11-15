@@ -9,15 +9,10 @@ local function Setup()
 		ScreenGui = nil
 	end
 
-	local TweenService = game:GetService("TweenService")
-	local TweenInf = TweenInfo.new(4)
-
 	local Character = Player.Character or Player.CharacterAdded:Wait()
 	local RootPart = Character:WaitForChild("HumanoidRootPart")
 	local Humanoid: Humanoid = Character:WaitForChild("Humanoid")
 
-	local TweenPrison = TweenService:Create(RootPart, TweenInf, {CFrame = CFrame.new(874.77, 99.99, 2275.22)})
-	local TweenCriminal = TweenService:Create(RootPart, TweenInf, {CFrame = CFrame.new(-935.53, 94.13, 2044.95)})
 
 	local PlayerGui = Player:WaitForChild("PlayerGui")
 
@@ -69,8 +64,6 @@ local function Setup()
 	GunsButton.BackgroundColor3 = Color3.fromRGB(111, 77, 43)
 	GunsButton.Parent = Frame
 	GunsButton.Text = "Get All Guns"
-	GunsButton.TextScaled = true
-
 	local TopBarStroke = Instance.new("UIStroke")
 	TopBarStroke.Parent = TopBar
 	TopBarStroke.Thickness = 2
@@ -89,18 +82,18 @@ local function Setup()
 	end)
 
 	PrisonButton.MouseButton1Down:Connect(function()
-		TweenPrison:Play()
+		RootPart.CFrame = CFrame.new(874.77, 99.99, 2275.22)
 	end)
 
 	CriminalButton.MouseButton1Down:Connect(function()
-		TweenCriminal:Play()
+		RootPart.CFrame = CFrame.new(-935.53, 94.13, 2044.95)
 	end)
 
 	GunsButton.MouseButton1Down:Connect(function()
 		RootPart.CFrame = CFrame.new(-931.664795, 94.3085175, 2039.32434, -0.998845398, 4.63891361e-08, 0.0480396971, 4.92446084e-08, 1, 5.82562905e-08, -0.0480396971, 6.05547257e-08, -0.998845398)
-		task.wait(1)
+		task.wait(1.5)
 		RootPart.CFrame = CFrame.new(-939.056824, 94.3683777, 2039.39075, -0.999508262, 0, 0.0313565396, 0, 1, 0, -0.0313565396, 0, -0.999508262)
-		task.wait(0.3)
+		task.wait(0.5)
 		RootPart.CFrame = CFrame.new(874.77, 99.99, 2275.22)
 	end)
 
