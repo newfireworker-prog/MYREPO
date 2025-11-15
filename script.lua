@@ -39,6 +39,7 @@ local function Setup()
 	Frame.Size = UDim2.new(0, 240, 0, 371)
 	Frame.BackgroundColor3 = Color3.fromRGB(255, 39, 32)
 	Frame.Parent = TopBar
+	
 
 	local PrisonButton = Instance.new("TextButton")
 	PrisonButton.Position = UDim2.new(0.083, 0, 0.063, 0)
@@ -48,7 +49,6 @@ local function Setup()
 	PrisonButton.BackgroundColor3 = Color3.fromRGB(255, 150, 65)
 	PrisonButton.TextScaled = true
 
-
 	local CriminalButton = Instance.new("TextButton")
 	CriminalButton.Position = UDim2.new(0.083, 0, 0.246, 0)
 	CriminalButton.Size = UDim2.new(0, 200, 0, 50)
@@ -57,13 +57,15 @@ local function Setup()
 	CriminalButton.BackgroundColor3 = Color3.fromRGB(213, 18, 21)
 	CriminalButton.TextScaled = true
 
-
 	local GunsButton = Instance.new("TextButton")
 	GunsButton.Position = UDim2.new(0.083, 0,0.432, 0)
 	GunsButton.Size = UDim2.new(0, 200,0, 50)
 	GunsButton.BackgroundColor3 = Color3.fromRGB(111, 77, 43)
 	GunsButton.Parent = Frame
 	GunsButton.Text = "Get All Guns"
+	GunsButton.TextScaled = true
+	
+	
 	local TopBarStroke = Instance.new("UIStroke")
 	TopBarStroke.Parent = TopBar
 	TopBarStroke.Thickness = 2
@@ -90,9 +92,9 @@ local function Setup()
 	end)
 
 	GunsButton.MouseButton1Down:Connect(function()
-		RootPart.CFrame = CFrame.new(-931.664795, 94.3085175, 2039.32434, -0.998845398, 4.63891361e-08, 0.0480396971, 4.92446084e-08, 1, 5.82562905e-08, -0.0480396971, 6.05547257e-08, -0.998845398)
-		task.wait(1.5)
-		RootPart.CFrame = CFrame.new(-939.056824, 94.3683777, 2039.39075, -0.999508262, 0, 0.0313565396, 0, 1, 0, -0.0313565396, 0, -0.999508262)
+		RootPart.CFrame = CFrame.new(-938.788574, 99.3828735, 2039.18945, -0.999932408, -0.000327760994, -0.0116229327, 8.10527325e-08, 0.999602437, -0.0281952713, 0.011627553, -0.0281933658, -0.999534845)
+		task.wait(2)
+		RootPart.CFrame = CFrame.new(-931.743835, 101.429962, 2039.17712, -0.999943495, 0.000280032138, 0.0106283231, 8.12098833e-08, 0.99965328, -0.0263309497, -0.010632012, -0.0263294596, -0.999596775)
 		task.wait(0.5)
 		RootPart.CFrame = CFrame.new(874.77, 99.99, 2275.22)
 	end)
